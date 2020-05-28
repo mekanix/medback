@@ -12,3 +12,4 @@ project.mk
 vars.mk
 database.db
 __pycache__
+static/
