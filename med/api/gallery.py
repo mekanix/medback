@@ -30,7 +30,7 @@ class GalleryAlbumListAPI(MethodView):
     def post(self, args):
         """Create album post"""
         try:
-            album = GalleryAlbum.find(album.name)
+            album = GalleryAlbum.get(name=args['name'])
             abort(409, message='Album with the same name already exists')
         except GalleryAlbum.DoesNotExist:
             album = GalleryAlbum(**args)
