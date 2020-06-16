@@ -23,7 +23,8 @@ class GalleryAlbumListAPI(MethodView):
     @blueprint.response(GalleryAlbumPageOutSchema)
     def get(self, pagination, year=None):
         """Get list of albums"""
-        return paginate(GalleryAlbum.select(), pagination)
+        query = GalleryAlbum.select()
+        return paginate(query, pagination)
 
     @blueprint.arguments(GalleryAlbumSchema)
     @blueprint.response(GalleryAlbumSchema)
