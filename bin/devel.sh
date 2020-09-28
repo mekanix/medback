@@ -14,7 +14,6 @@ export SYSPKG=${SYSPKG:="no"}
 setup no
 
 
-cd "${PROJECT_ROOT}"
 if [ "${SYSPKG}" = "no" ]; then
   if [ "${OFFLINE}" != "yes" ]; then
     pip install -U -r requirements_dev.txt

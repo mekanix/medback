@@ -1,7 +1,8 @@
 .include <name.py>
 
+SYSPKG = YES
+USE_FREENIT = YES
 SERVICE != echo ${app_name}
 REGGAE_PATH := /usr/local/share/reggae
-USE_FREENIT = YES
 
 .include <${REGGAE_PATH}/mk/service.mk>

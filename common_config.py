@@ -9,6 +9,8 @@ SECRET_KEY = 'iQfPvB6sZaNHqVFI5CJa9rM1xOEVHKIM0LwifT04yLsPlZhSSvaDuZXOgJFSpJVq'
 
 class Config:
     NAME = app_name
+    API_TITLE = app_name
+    API_VERSION = 0
     PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
     DEBUG = False
     SECURITY_PASSWORD_SALT = 'freenit'
@@ -32,6 +34,7 @@ class Config:
     MEDIA_PATH = 'media'
     ACCOUNT_REQUEST_EXPIRY = 24  # in hours
     PASSWORD_RESET_EXPIRY = 2  # in hours
+    COLLECT_STATIC_ROOT = os.path.dirname(__file__) + '/static'
     DATABASE = {
         'name': 'database.db',
         'engine': 'SqliteDatabase',
